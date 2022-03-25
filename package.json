@@ -8,9 +8,7 @@
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "pretty": "npx prettier --write ./src",
-    "pr": "npm run build && npm run lint && npm run test:coverage",
     "test:unit": "jest",
-    "test:coverage": "npx nyc npm run test:unit",
     "start:app": "node --inspect -r dotenv/config -r source-map-support/register ./dist/src/index.js",
     "start": "tsc-watch --onSuccess \"npm run start:app\""
   },

@@ -13,13 +13,12 @@ Ledger Rest API.
 - `lint` Reports linting erros,
 - `lint:fix` Automatically fixes linting errors,
 - `pretty` Automatically fixes code styling,
-- `pr` Recommended to run before raising PR,
 - `test:unit` Runs unit tests,
-- `test:coverage` Reports test coverage,
 - `start:app` Starts app in debug mode,
 - `start` Starts app in watch mode
 
 ## Notes
 
-- About success responses
-- About error responses
+- Install packages using `npm install`
+- Start server using `npm start`
+- Navigate to url http://localhost:3000/ledger?start_date=2020-03-02T00:00:00.000Z&end_date=2020-03-22T00:00:00.000Z&frequency=weekly&weekly_rent=555&timezone=Australia/Sydney

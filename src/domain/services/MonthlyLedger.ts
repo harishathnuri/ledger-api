@@ -61,7 +61,6 @@ class MonthlyLedger extends Ledger {
     }
 
     if (intervalStartDate < leaseEndDate) {
-      debugger;
       intervals.residualInterval = {
         intervalStartDate: intervalStartDate.toJSDate(),
         intervalEndDate: leaseEndDate.toJSDate(),
