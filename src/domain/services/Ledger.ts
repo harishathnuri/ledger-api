@@ -27,9 +27,9 @@ abstract class Ledger {
     // divide lease duration into given frequency
     const intervals = this.generateIntervals();
     // generate line items for standard intervals
-    let standardItems = this.generateLineItemsForStandardIntervals(intervals.standardIntervals);
+    const standardItems = this.generateLineItemsForStandardIntervals(intervals.standardIntervals);
     // generate line item for residual interval
-    let residualItem = this.generateLineItemForResidualInterval(intervals.residualInterval);
+    const residualItem = this.generateLineItemForResidualInterval(intervals.residualInterval);
 
     if (standardItems.length > 0 && residualItem) {
       return { items: [...standardItems, residualItem] };

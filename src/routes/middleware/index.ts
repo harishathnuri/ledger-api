@@ -17,8 +17,8 @@ export function ErrorHandlerMiddleware(error: Error, req: Request, res: Response
     [500, { type: 'internal-server-error', title: 'Internal Server Error' }],
   ]);
 
-  let type: string = '';
-  let title: string = '';
+  let type = '';
+  let title = '';
   let messages: Optional<ErrorMessage[]>;
 
   if (error instanceof ValidationError) {

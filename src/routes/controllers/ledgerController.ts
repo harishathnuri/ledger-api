@@ -10,7 +10,7 @@ import { ledgerFactory } from '../../domain/helpers/ledgerFactory';
 async function getLedger(req: Request, res: Response, next: NextFunction): Promise<any> {
   try {
     // validaton of domain payload
-    let requestParams = {
+    const requestParams = {
       start_date: req.query.start_date,
       end_date: req.query.end_date,
       frequency: req.query.frequency,

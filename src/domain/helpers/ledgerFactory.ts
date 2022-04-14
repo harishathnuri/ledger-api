@@ -19,9 +19,10 @@ export function ledgerFactory(frequency: PaymentFrequency): Ledger {
       ledger = new MonthlyLedger();
       break;
     }
-    default:
+    default: {
       const exhaustiveCheck: never = frequency;
       throw new Error(exhaustiveCheck);
+    }
   }
 
   return ledger;
