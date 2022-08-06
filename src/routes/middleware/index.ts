@@ -1,16 +1,16 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 
 import { ErrorMessage, Problem } from '../util/Problem';
 import { ValidationError } from '../../domain/errors';
 
-export function ErrorHandlerMiddleware(error: Error, req: Request, res: Response, next?: NextFunction): void {
+export function ErrorHandlerMiddleware(error: Error, req: Request, res: Response): void {
   let status = res.statusCode || 500;
 
   if (error instanceof SyntaxError) {
     status = 400;
   }
 
-  const problemMap = new Map<number, any>([
+  const problemMap = new Map<number, { type: string; title: string }>([
     [400, { type: 'bad-request', title: 'Bad Request' }],
     [403, { type: 'forbidden', title: 'Forbidden' }],
     [404, { type: 'not-found', title: 'Not Found' }],
