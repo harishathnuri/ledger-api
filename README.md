@@ -9,12 +9,12 @@ Ledger Rest API.
 
 ## Scripts
 
-- `build` Builds the project,
-- `lint` Reports linting erros,
-- `lint:fix` Automatically fixes linting errors,
-- `pretty` Automatically fixes code styling,
-- `test:unit` Runs unit tests,
-- `start:app` Starts app in debug mode,
+- `build` Builds the project
+- `lint` Reports linting erros
+- `lint:fix` Automatically fixes linting errors
+- `pretty` Automatically fixes code styling
+- `test:unit` Runs unit tests
+- `start:app` Starts app in debug mode
 - `start` Starts app in watch mode
 
 ## Notes
