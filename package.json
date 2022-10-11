@@ -7,7 +7,7 @@
     "build": "rimraf ./dist && tsc",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
-    "pretty": "npx prettier --write ./src",
+    "pretty": "prettier --write ./src",
     "test:unit": "jest",
     "start:app": "node --inspect -r dotenv/config -r source-map-support/register ./dist/src/index.js",
     "start": "tsc-watch --onSuccess \"npm run start:app\""
