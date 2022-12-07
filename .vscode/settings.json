@@ -4,6 +4,7 @@
     "source.fixAll": true
   },
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
