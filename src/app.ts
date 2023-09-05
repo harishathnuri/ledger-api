@@ -4,6 +4,7 @@ import requestLogger from 'morgan';
 import { Config } from './config';
 import defaultRoutes from './routes';
 import ledgerRoutes from './routes/ledger';
+import { metricsMiddleware } from './routes/middleware';
 
 export default (config: Config): Application => {
   const app = express();
@@ -11,6 +12,8 @@ export default (config: Config): Application => {
   if (config.env !== 'production') {
     app.use(requestLogger('tiny'));
   }
+
+  app.use(metricsMiddleware);
 
   app.use('/ledger', ledgerRoutes());
 
